@@ -1,0 +1,23 @@
+[package]
+name = "interlude-ffi"
+version = "1.0.2"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "staticlib", "rlib"]
+name = "interlude_ffi"
+
+[[bin]]
+name = "uniffi-bindgen"
+path = "src/bin/uniffi-bindgen.rs"
+required-features = ["cli"]
+
+[features]
+default = []
+cli = ["uniffi/cli"]
+
+[dependencies]
+interlude-core = { path = "../interlude-core" }
+serde_json = "1"
+tokio = { version = "1", features = ["rt-multi-thread"] }
+uniffi = "0.29"

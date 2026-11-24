@@ -1,0 +1,12 @@
+﻿[workspace]
+resolver = "2"
+members = [
+    "crates/interlude-core",
+    "crates/interlude-ffi",
+]
+
+[profile.release]
+opt-level = "s"
+lto = "thin"
+codegen-units = 1
+strip = "symbols"

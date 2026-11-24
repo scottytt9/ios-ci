@@ -1,0 +1,9 @@
+/build/
+/Interlude.xcodeproj/
+*.ipa
+/Vendor/
+/.build/
+/.swiftpm/
+/.xtool-tmp/
+/xtool/
+/Interlude/Generated/
